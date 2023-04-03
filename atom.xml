@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>个人博客</title>
+  
+  
+  <link href="https://blog.zzcym.asia/atom.xml" rel="self"/>
+  
+  <link href="https://blog.zzcym.asia/"/>
+  <updated>2023-04-03T16:56:24.909Z</updated>
+  <id>https://blog.zzcym.asia/</id>
+  
+  <author>
+    <name>cym</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>后台管理系统</title>
+    <link href="https://blog.zzcym.asia/2023/04/04/%E4%BB%BB%E5%8A%A11/"/>
+    <id>https://blog.zzcym.asia/2023/04/04/%E4%BB%BB%E5%8A%A11/</id>
+    <published>2023-04-03T16:52:18.000Z</published>
+    <updated>2023-04-03T16:56:24.909Z</updated>
+    
+    
+    
+    
+    <category term="Thhingworx" scheme="https://blog.zzcym.asia/categories/Thhingworx/"/>
+    
+    
+    <category term="后端" scheme="https://blog.zzcym.asia/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="前端" scheme="https://blog.zzcym.asia/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>介绍</title>
+    <link href="https://blog.zzcym.asia/2023/04/04/%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://blog.zzcym.asia/2023/04/04/%E4%BB%8B%E7%BB%8D/</id>
+    <published>2023-04-03T16:52:18.000Z</published>
+    <updated>2023-04-03T16:55:11.848Z</updated>
+    
+    <content type="html"><![CDATA[<p>公司用到了thingworx，所以后续会在这里发thingworx相关的文档，有兴趣的朋友可以看一下</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;公司用到了thingworx，所以后续会在这里发thingworx相关的文档，有兴趣的朋友可以看一下&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Thingworx" scheme="https://blog.zzcym.asia/categories/Thingworx/"/>
+    
+    
+  </entry>
+  
+</feed>
