@@ -6,7 +6,7 @@
   <link href="https://blog.zzcym.asia/atom.xml" rel="self"/>
   
   <link href="https://blog.zzcym.asia/"/>
-  <updated>2023-04-20T07:07:35.902Z</updated>
+  <updated>2023-04-20T09:48:45.941Z</updated>
   <id>https://blog.zzcym.asia/</id>
   
   <author>
@@ -21,18 +21,16 @@
     <link href="https://blog.zzcym.asia/2023/04/20/hexo%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%E6%9D%A5%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>https://blog.zzcym.asia/2023/04/20/hexo%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%E6%9D%A5%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
     <published>2023-04-20T06:58:48.000Z</published>
-    <updated>2023-04-20T07:07:35.902Z</updated>
+    <updated>2023-04-20T09:48:45.941Z</updated>
     
     <content type="html"><![CDATA[<p>必须得吐槽一下，网上搜这个问题的解决的时候大部分都是没啥用的文章，还高度一致。。。。。。稍不留神就看到17年的文章，那都是好几年前的版本了，照着做完全是浪费时间。</p><p>本篇默认你已经安装好了hexo，如果没有的可以直接关掉了，先去装了且有这个问题再来看这篇文章。</p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>直接进入到你hexo的目录，cmd打开命令行，执行npm install hexo-asset-image –save（默认安装好了npm）</p><p>接着<code>node_modules</code> -&gt; <code>hexo-asset-image</code> -&gt; <code>index.js</code></p><p>第58行找到，或者直接全局搜索也行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(this).attr(&#x27;src&#x27;, config.root + link + src);</span><br></pre></td></tr></table></figure><p>修改为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(this).attr(&#x27;src&#x27;, src);</span><br></pre></td></tr></table></figure><p>然后就完成了。</p><p>每次生成new 一篇文章的时候会自动再同目录下生成相同名的文件夹，该文件夹下存放你的图片地址</p><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>在你需要插入图片的地方使用如下语法，假设图片的名字为logo.png</p><p>用法：<code>!(logo)[logo.png]</code>       如果想在md里面看到图片的效果：<code>!(logo)[目录名（即）/logo.png]</code></p><p>好，完事。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;必须得吐槽一下，网上搜这个问题的解决的时候大部分都是没啥用的文章，还高度一致。。。。。。稍不留神就看到17年的文章，那都是好几年前的版本了，照着做完全是浪费时间。&lt;/p&gt;
-&lt;p&gt;本篇默认你已经安装好了hexo，如果没有的可以直接关掉了，先去装了且有这个问题再来看这篇文章。&lt;</summary>
-      
+    <summary type="html">hexo加载不出来图片解决方案</summary>
     
     
+    
+    <category term="hexo" scheme="https://blog.zzcym.asia/categories/hexo/"/>
     
     
   </entry>

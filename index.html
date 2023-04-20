@@ -185,8 +185,8 @@
             
 
   
-    <article id="title-hexo加载不出来图片解决方案"
-         class="article article-type-title  article-index"
+    <article id="post-hexo加载不出来图片解决方案"
+         class="article article-type-post  article-index"
          itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -216,22 +216,8 @@
         
         <div class="article-entry" itemprop="articleBody">
             
-                <p>必须得吐槽一下，网上搜这个问题的解决的时候大部分都是没啥用的文章，还高度一致。。。。。。稍不留神就看到17年的文章，那都是好几年前的版本了，照着做完全是浪费时间。</p>
-<p>本篇默认你已经安装好了hexo，如果没有的可以直接关掉了，先去装了且有这个问题再来看这篇文章。</p>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>直接进入到你hexo的目录，cmd打开命令行，执行npm install hexo-asset-image –save（默认安装好了npm）</p>
-<p>接着<code>node_modules</code> -&gt; <code>hexo-asset-image</code> -&gt; <code>index.js</code></p>
-<p>第58行找到，或者直接全局搜索也行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(this).attr(&#x27;src&#x27;, config.root + link + src);</span><br></pre></td></tr></table></figure>
-
-<p>修改为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(this).attr(&#x27;src&#x27;, src);</span><br></pre></td></tr></table></figure>
-
-<p>然后就完成了。</p>
-<p>每次生成new 一篇文章的时候会自动再同目录下生成相同名的文件夹，该文件夹下存放你的图片地址</p>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>在你需要插入图片的地方使用如下语法，假设图片的名字为logo.png</p>
-<p>用法：<code>!(logo)[logo.png]</code>       如果想在md里面看到图片的效果：<code>!(logo)[目录名（即）/logo.png]</code></p>
-<p>好，完事。</p>
-
+                hexo加载不出来图片解决方案
+                
             
 
             
@@ -243,6 +229,17 @@
             
             
             
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
             
                 <p class="article-more-link">
