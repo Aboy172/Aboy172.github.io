@@ -10,12 +10,12 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Thingworx连接MQTT连接emqx部署这里以windows系统为例 ​	emqx安装包  emqx-5.0.22-windows-amd64.zip  ​	工具 MQTTX-Setup-1.9.1-x64.exe  下载好第一个文件解压文件夹，进入bin目录，执行emqx start   EMQX 默认提供 5 个 Listener，它们将占用以下端口：    端口 说明    1883">
+  <meta name="description" content="1234567title: Thingworx连接MQTTdate: 2023-04-07 22:37:23excerpt: &quot;Thingworx连接MQTT&quot;categories: - thingworxtags:- 后端    Thingworx连接MQTT连接emqx部署这里以windows系统为例 ​	emqx安装包  emqx-5.0.22-windows-amd64">
 <meta property="og:type" content="article">
 <meta property="og:title" content="个人博客">
-<meta property="og:url" content="https://blog.zzcym.asia/2023/04/20/Thingworx%E8%BF%9E%E6%8E%A5MQTT/index.html">
+<meta property="og:url" content="https://blog.zzcym.asia/2023/04/20/Thingworx%E8%BF%9E%E6%8E%A5mqtt/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="Thingworx连接MQTT连接emqx部署这里以windows系统为例 ​	emqx安装包  emqx-5.0.22-windows-amd64.zip  ​	工具 MQTTX-Setup-1.9.1-x64.exe  下载好第一个文件解压文件夹，进入bin目录，执行emqx start   EMQX 默认提供 5 个 Listener，它们将占用以下端口：    端口 说明    1883">
+<meta property="og:description" content="1234567title: Thingworx连接MQTTdate: 2023-04-07 22:37:23excerpt: &quot;Thingworx连接MQTT&quot;categories: - thingworxtags:- 后端    Thingworx连接MQTT连接emqx部署这里以windows系统为例 ​	emqx安装包  emqx-5.0.22-windows-amd64">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="c:\Users\86152\AppData\Roaming\Typora\typora-user-images\image-20230420105557168.png">
 <meta property="og:image" content="c:\Users\86152\AppData\Roaming\Typora\typora-user-images\image-20230420110313991.png">
@@ -23,8 +23,8 @@
 <meta property="og:image" content="c:\Users\86152\AppData\Roaming\Typora\typora-user-images\image-20230420110543994.png">
 <meta property="og:image" content="c:\Users\86152\AppData\Roaming\Typora\typora-user-images\image-20230420110657050.png">
 <meta property="og:image" content="c:\Users\86152\AppData\Roaming\Typora\typora-user-images\image-20230420110813034.png">
-<meta property="article:published_time" content="2023-04-20T03:09:23.396Z">
-<meta property="article:modified_time" content="2023-04-20T03:11:18.044Z">
+<meta property="article:published_time" content="2023-04-20T03:23:47.176Z">
+<meta property="article:modified_time" content="2023-04-20T03:25:05.313Z">
 <meta property="article:author" content="cym">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:\Users\86152\AppData\Roaming\Typora\typora-user-images\image-20230420105557168.png">
@@ -189,14 +189,18 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Thingworx连接MQTT"
+            <article id="post-Thingworx连接mqtt"
          class="article article-type-post "
          itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <div class="article-entry" itemprop="articleBody">
             
-                <h1 id="Thingworx连接MQTT"><a href="#Thingworx连接MQTT" class="headerlink" title="Thingworx连接MQTT"></a>Thingworx连接MQTT</h1><h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><h3 id="emqx部署"><a href="#emqx部署" class="headerlink" title="emqx部署"></a>emqx部署</h3><p>这里以windows系统为例</p>
+                <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: Thingworx连接MQTT</span><br><span class="line">date: 2023-04-07 22:37:23</span><br><span class="line">excerpt: &quot;Thingworx连接MQTT&quot;</span><br><span class="line">categories: </span><br><span class="line">- thingworx</span><br><span class="line">tags:</span><br><span class="line">- 后端</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Thingworx连接MQTT"><a href="#Thingworx连接MQTT" class="headerlink" title="Thingworx连接MQTT"></a>Thingworx连接MQTT</h1><h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><h3 id="emqx部署"><a href="#emqx部署" class="headerlink" title="emqx部署"></a>emqx部署</h3><p>这里以windows系统为例</p>
 <p>​	emqx安装包  <a href="E:\工作\上课用到的\emqx-5.0.22-windows-amd64.zip">emqx-5.0.22-windows-amd64.zip</a> </p>
 <p>​	工具 <a href="C:\Users\86152\Downloads\MQTTX-Setup-1.9.1-x64.exe">MQTTX-Setup-1.9.1-x64.exe</a> </p>
 <p>下载好第一个文件解压文件夹，进入bin目录，执行emqx start </p>
@@ -261,8 +265,8 @@
                         </li>
                         <li>
                             <strong>本文链接：</strong>
-                            <a href="https://blog.zzcym.asia/2023/04/20/Thingworx连接MQTT/"
-                               title="" target="_blank">https://blog.zzcym.asia/2023/04/20/Thingworx连接MQTT/</a>
+                            <a href="https://blog.zzcym.asia/2023/04/20/Thingworx连接mqtt/"
+                               title="" target="_blank">https://blog.zzcym.asia/2023/04/20/Thingworx连接mqtt/</a>
                         </li>
                         
                             <li>
@@ -329,7 +333,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blog.zzcym.asia/2023/04/20/Thingworx%E8%BF%9E%E6%8E%A5MQTT/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blog.zzcym.asia/2023/04/20/Thingworx%E8%BF%9E%E6%8E%A5mqtt/" alt="微信分享二维码"> -->
     </div>
 </div>
 
