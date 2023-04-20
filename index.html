@@ -185,6 +185,98 @@
             
 
   
+    <article id="title-hexo加载不出来图片解决方案"
+         class="article article-type-title  article-index"
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2023/04/20/hexo%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%E6%9D%A5%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" target="_blank">hexo加载不出来图片解决方案</a>
+  
+    </h1>
+  
+
+
+                
+                    
+<a href="/2023/04/20/hexo%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%E6%9D%A5%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="archive-article-date">
+        <time datetime="2023-04-20T06:58:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-20</time>
+</a>
+
+                
+                
+                    
+
+                
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+                <p>必须得吐槽一下，网上搜这个问题的解决的时候大部分都是没啥用的文章，还高度一致。。。。。。稍不留神就看到17年的文章，那都是好几年前的版本了，照着做完全是浪费时间。</p>
+<p>本篇默认你已经安装好了hexo，如果没有的可以直接关掉了，先去装了且有这个问题再来看这篇文章。</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>直接进入到你hexo的目录，cmd打开命令行，执行npm install hexo-asset-image –save（默认安装好了npm）</p>
+<p>接着<code>node_modules</code> -&gt; <code>hexo-asset-image</code> -&gt; <code>index.js</code></p>
+<p>第58行找到，或者直接全局搜索也行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(this).attr(&#x27;src&#x27;, config.root + link + src);</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(this).attr(&#x27;src&#x27;, src);</span><br></pre></td></tr></table></figure>
+
+<p>然后就完成了。</p>
+<p>每次生成new 一篇文章的时候会自动再同目录下生成相同名的文件夹，该文件夹下存放你的图片地址</p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>在你需要插入图片的地方使用如下语法，假设图片的名字为logo.png</p>
+<p>用法：<code>!(logo)[logo.png]</code>       如果想在md里面看到图片的效果：<code>!(logo)[目录名（即）/logo.png]</code></p>
+<p>好，完事。</p>
+
+            
+
+            
+
+            
+
+        </div>
+        <div class="article-info article-info-index">
+            
+            
+            
+
+            
+                <p class="article-more-link">
+                    <a class="article-more-a"
+                       href="/2023/04/20/hexo%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%E6%9D%A5%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">展开全文 >></a>
+                </p>
+            
+
+            
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Thingworx连接MQTT"
          class="article article-type-post  article-index"
          itemscope itemprop="blogPost">
@@ -389,6 +481,95 @@
 
 
   
+    <article id="post-介绍"
+         class="article article-type-post  article-index"
+         itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2023/04/04/%E4%BB%8B%E7%BB%8D/" target="_blank">介绍</a>
+  
+    </h1>
+  
+
+
+                
+                    
+<a href="/2023/04/04/%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
+        <time datetime="2023-04-03T16:52:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-04</time>
+</a>
+
+                
+                
+                    
+
+                
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+                <p>公司用到了thingworx，所以后续会在这里发thingworx相关的文档，有兴趣的朋友可以看一下</p>
+
+            
+
+            
+
+            
+
+        </div>
+        <div class="article-info article-info-index">
+            
+            
+            
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Thingworx//" class="article-tag-list-link color5">Thingworx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+            
+                <p class="article-more-link">
+                    <a class="article-more-a"
+                       href="/2023/04/04/%E4%BB%8B%E7%BB%8D/">展开全文 >></a>
+                </p>
+            
+
+            
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-后台管理系统"
          class="article article-type-post  article-index"
          itemscope itemprop="blogPost">
@@ -463,95 +644,6 @@
                 <p class="article-more-link">
                     <a class="article-more-a"
                        href="/2023/04/04/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">展开全文 >></a>
-                </p>
-            
-
-            
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-介绍"
-         class="article article-type-post  article-index"
-         itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/04/04/%E4%BB%8B%E7%BB%8D/" target="_blank">介绍</a>
-  
-    </h1>
-  
-
-
-                
-                    
-<a href="/2023/04/04/%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-        <time datetime="2023-04-03T16:52:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-04</time>
-</a>
-
-                
-                
-                    
-
-                
-            </header>
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-                <p>公司用到了thingworx，所以后续会在这里发thingworx相关的文档，有兴趣的朋友可以看一下</p>
-
-            
-
-            
-
-            
-
-        </div>
-        <div class="article-info article-info-index">
-            
-            
-            
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Thingworx//" class="article-tag-list-link color5">Thingworx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-            
-                <p class="article-more-link">
-                    <a class="article-more-a"
-                       href="/2023/04/04/%E4%BB%8B%E7%BB%8D/">展开全文 >></a>
                 </p>
             
 

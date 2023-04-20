@@ -6,7 +6,7 @@
   <link href="https://blog.zzcym.asia/atom.xml" rel="self"/>
   
   <link href="https://blog.zzcym.asia/"/>
-  <updated>2023-04-20T06:47:53.049Z</updated>
+  <updated>2023-04-20T07:07:35.902Z</updated>
   <id>https://blog.zzcym.asia/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo加载不出来图片解决方案</title>
+    <link href="https://blog.zzcym.asia/2023/04/20/hexo%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%E6%9D%A5%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://blog.zzcym.asia/2023/04/20/hexo%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%E6%9D%A5%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2023-04-20T06:58:48.000Z</published>
+    <updated>2023-04-20T07:07:35.902Z</updated>
+    
+    <content type="html"><![CDATA[<p>必须得吐槽一下，网上搜这个问题的解决的时候大部分都是没啥用的文章，还高度一致。。。。。。稍不留神就看到17年的文章，那都是好几年前的版本了，照着做完全是浪费时间。</p><p>本篇默认你已经安装好了hexo，如果没有的可以直接关掉了，先去装了且有这个问题再来看这篇文章。</p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>直接进入到你hexo的目录，cmd打开命令行，执行npm install hexo-asset-image –save（默认安装好了npm）</p><p>接着<code>node_modules</code> -&gt; <code>hexo-asset-image</code> -&gt; <code>index.js</code></p><p>第58行找到，或者直接全局搜索也行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(this).attr(&#x27;src&#x27;, config.root + link + src);</span><br></pre></td></tr></table></figure><p>修改为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(this).attr(&#x27;src&#x27;, src);</span><br></pre></td></tr></table></figure><p>然后就完成了。</p><p>每次生成new 一篇文章的时候会自动再同目录下生成相同名的文件夹，该文件夹下存放你的图片地址</p><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>在你需要插入图片的地方使用如下语法，假设图片的名字为logo.png</p><p>用法：<code>!(logo)[logo.png]</code>       如果想在md里面看到图片的效果：<code>!(logo)[目录名（即）/logo.png]</code></p><p>好，完事。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;必须得吐槽一下，网上搜这个问题的解决的时候大部分都是没啥用的文章，还高度一致。。。。。。稍不留神就看到17年的文章，那都是好几年前的版本了，照着做完全是浪费时间。&lt;/p&gt;
+&lt;p&gt;本篇默认你已经安装好了hexo，如果没有的可以直接关掉了，先去装了且有这个问题再来看这篇文章。&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Thingworx连接MQTT</title>
     <link href="https://blog.zzcym.asia/2023/04/20/Thingworx%E8%BF%9E%E6%8E%A5MQTT/"/>
     <id>https://blog.zzcym.asia/2023/04/20/Thingworx%E8%BF%9E%E6%8E%A5MQTT/</id>
     <published>2023-04-20T03:28:15.000Z</published>
-    <updated>2023-04-20T06:47:53.049Z</updated>
+    <updated>2023-04-20T06:58:09.378Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Thingworx连接MQTT"><a href="#Thingworx连接MQTT" class="headerlink" title="Thingworx连接MQTT"></a>Thingworx连接MQTT</h1><h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><h3 id="emqx部署"><a href="#emqx部署" class="headerlink" title="emqx部署"></a>emqx部署</h3><p>这里以windows系统为例</p><p>​emqx安装包  <a href="E:\工作\上课用到的\emqx-5.0.22-windows-amd64.zip">emqx-5.0.22-windows-amd64.zip</a> </p><p>​MQTT工具 <a href="C:\Users\86152\Downloads\MQTTX-Setup-1.9.1-x64.exe">MQTTX-Setup-1.9.1-x64.exe</a> </p><p>下载好第一个文件解压文件夹，进入bin目录，执行emqx start <img src="image-20230420105557168.png"></p><p>EMQX 默认提供 5 个 Listener，它们将占用以下端口：</p><table><thead><tr><th>端口</th><th>说明</th></tr></thead><tbody><tr><td>1883</td><td>MQTT&#x2F;TCP 协议端口</td></tr><tr><td>11883</td><td>MQTT&#x2F;TCP 协议内部端口，仅用于本机客户端连接</td></tr><tr><td>8883</td><td>MQTT&#x2F;SSL 协议端口</td></tr><tr><td>8083</td><td>MQTT&#x2F;WS 协议端口</td></tr><tr><td>8084</td><td>MQTT&#x2F;WSS 协议端口</td></tr></tbody></table><p>打开浏览器访问</p><p><a href="http://localhost:18083/">http://localhost:18083/</a></p><p>默认账号和密码为public，之后会让你修改秘密，确保安全性</p><p>System里有更改语言，可以更改为简体中文</p><p><img src="image-20230420110313991.png" alt="更改语言">&#x2F;&#x2F; 注意格式不要写错</p><p>选择访问控制-》创建-》一直下一步就行</p><p>点击用户管理</p><p><img src="image-20230420110516192.png" alt="image-20230420110516192"></p><p>添加用户</p><p><img src="image-20230420110543994.png" alt="image-20230420110543994"></p><p>配置完以后可以用mqtt工具来测试是否能访问</p><p>我的账号和密码是admin2，如图所示</p><p><img src="image-20230420110657050.png" alt="image-20230420110657050"></p><p>点击Connect,出现Connected表示连接成功</p><p><img src="image-20230420110813034.png" alt="image-20230420110813034"></p><h3 id="Thingworx配置"><a href="#Thingworx配置" class="headerlink" title="Thingworx配置"></a>Thingworx配置</h3><p>新建事物，实现的事物模板为MQTT</p><p>然后点击配置，修改ip地址为本机的ip地址，不能使用localhost，因为thingworx服务器跟本机的ip地址是不同的， 端口默认1883，账号和密码为你在emqx上设置的，然后保存，连接成功</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Thingworx连接MQTT"><a href="#Thingworx连接MQTT" class="headerlink" title="Thingworx连接MQTT"></a>Thingworx连接MQTT</h1><h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><h3 id="emqx部署"><a href="#emqx部署" class="headerlink" title="emqx部署"></a>emqx部署</h3><p>这里以windows系统为例</p><p>下载好第一个文件解压文件夹，进入bin目录，执行emqx start <img src="image-20230420105557168.png"></p><p>EMQX 默认提供 5 个 Listener，它们将占用以下端口：</p><table><thead><tr><th>端口</th><th>说明</th></tr></thead><tbody><tr><td>1883</td><td>MQTT&#x2F;TCP 协议端口</td></tr><tr><td>11883</td><td>MQTT&#x2F;TCP 协议内部端口，仅用于本机客户端连接</td></tr><tr><td>8883</td><td>MQTT&#x2F;SSL 协议端口</td></tr><tr><td>8083</td><td>MQTT&#x2F;WS 协议端口</td></tr><tr><td>8084</td><td>MQTT&#x2F;WSS 协议端口</td></tr></tbody></table><p>打开浏览器访问</p><p><a href="http://localhost:18083/">http://localhost:18083/</a></p><p>默认账号和密码为public，之后会让你修改秘密，确保安全性</p><p>System里有更改语言，可以更改为简体中文</p><p><img src="image-20230420110313991.png" alt="更改语言">&#x2F;&#x2F; 注意格式不要写错</p><p>选择访问控制-》创建-》一直下一步就行</p><p>点击用户管理</p><p><img src="image-20230420110516192.png" alt="image-20230420110516192"></p><p>添加用户</p><p><img src="image-20230420110543994.png" alt="image-20230420110543994"></p><p>配置完以后可以用mqtt工具来测试是否能访问</p><p>我的账号和密码是admin2，如图所示</p><p><img src="image-20230420110657050.png" alt="image-20230420110657050"></p><p>点击Connect,出现Connected表示连接成功</p><p><img src="image-20230420110813034.png" alt="image-20230420110813034"></p><h3 id="Thingworx配置"><a href="#Thingworx配置" class="headerlink" title="Thingworx配置"></a>Thingworx配置</h3><p>新建事物，实现的事物模板为MQTT</p><p>然后点击配置，修改ip地址为本机的ip地址，不能使用localhost，因为thingworx服务器跟本机的ip地址是不同的， 端口默认1883，账号和密码为你在emqx上设置的，然后保存，连接成功</p><p><a href="https://www.emqx.io/zh/downloads?os=Windows">emqx安装地址</a>:<br>[ <a href="https://www.emqx.io/zh/downloads?os=Windows%5D">https://www.emqx.io/zh/downloads?os=Windows]</a>: </p>]]></content>
     
     
     <summary type="html">本篇会展示一下Thhingworx如何连接MQTT</summary>
@@ -61,25 +82,6 @@
   </entry>
   
   <entry>
-    <title>后台管理系统</title>
-    <link href="https://blog.zzcym.asia/2023/04/04/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
-    <id>https://blog.zzcym.asia/2023/04/04/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</id>
-    <published>2023-04-03T16:52:18.000Z</published>
-    <updated>2023-04-03T16:56:24.909Z</updated>
-    
-    
-    
-    
-    <category term="Thhingworx" scheme="https://blog.zzcym.asia/categories/Thhingworx/"/>
-    
-    
-    <category term="后端" scheme="https://blog.zzcym.asia/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-    <category term="前端" scheme="https://blog.zzcym.asia/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>介绍</title>
     <link href="https://blog.zzcym.asia/2023/04/04/%E4%BB%8B%E7%BB%8D/"/>
     <id>https://blog.zzcym.asia/2023/04/04/%E4%BB%8B%E7%BB%8D/</id>
@@ -99,6 +101,25 @@
     
     <category term="Thingworx" scheme="https://blog.zzcym.asia/categories/Thingworx/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>后台管理系统</title>
+    <link href="https://blog.zzcym.asia/2023/04/04/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://blog.zzcym.asia/2023/04/04/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</id>
+    <published>2023-04-03T16:52:18.000Z</published>
+    <updated>2023-04-03T16:56:24.909Z</updated>
+    
+    
+    
+    
+    <category term="Thhingworx" scheme="https://blog.zzcym.asia/categories/Thhingworx/"/>
+    
+    
+    <category term="后端" scheme="https://blog.zzcym.asia/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="前端" scheme="https://blog.zzcym.asia/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
